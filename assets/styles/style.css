@@ -1,0 +1,219 @@
+
+/* Global selector to override all the default values*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #FFFFFF;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    background-color: #EFEFEF;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header.header {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #BFBFBF;
+    padding: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.coloum-3 {
+    flex-basis: 25%;
+}
+
+.coloum-9 {
+    flex-basis: 75%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card-container .card-item {
+    background-color: #6f98a8;
+    color: #FFFFFF;
+    flex-basis: 33.3333%;
+    padding: 3rem;
+    text-align: center;
+}
+
+.card-container .card-item:nth-child(2),
+.card-container .card-item:nth-child(4) {
+    background-color: #2B8ead;
+}
+
+
+.card-container .card-item:nth-child(3),
+.card-container .card-item:nth-child(5),
+.card-container .card-item:nth-child(9) {
+    background-color: #2f454e;
+}
+
+
+.card-container .card-item:nth-child(6),
+.card-container .card-item:nth-child(7) {
+    background-color: #BFBFBF;
+}
+
+.card-container .card-item h3 {
+    font-size: 3rem;
+}
+
+button.btn {
+    border:0;
+    border-radius: 0.25rem;
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+button.btn:hover,
+button.btn:focus {
+    outline: none;
+    border: 0;
+}
+
+.btn-blue {
+    background-color: #72c3dc;
+    box-shadow: 0 0.3rem 0 0 #2b8ead;
+    color: #FFFFFF;
+}
+
+.btn-blue:hover {
+    background-color: #2f454e;
+}
+
+.btn-blue:focus {
+    box-shadow: 0 0.25rem 0 0 #2b8ead;
+}
+
+footer.footer {
+    padding: 1rem;
+}
+
+/*heading tags*/
+h1 {
+    font-size: 1.5rem; 
+}
+
+/* common classes to use */
+.text-align-center {
+    text-align: center;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+/* media query for entire layout*/
+
+@media (max-width: 768px) {
+    .wrapper {
+        background-color: #000000;
+        padding: 0.5rem 1rem;
+    }
+
+    header.header {
+        background-color: transparent;
+        border: 0;
+    }
+
+    header.header h1 {
+        color: #FFFFFF;
+    }
+
+    main.main-container {
+        background-color: #FFFFFF;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .coloum-9,
+    .coloum-3 {
+        flex-basis: 100%;
+    }
+
+    .btn-container {
+        text-align: center;
+    }
+
+    button.btn {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        width: auto;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-container .card-item {
+        color: #000000;
+        margin-bottom: 0.1rem;
+        position: relative;
+    }
+
+    .card-container .card-item,
+    .card-container .card-item:nth-child(2),
+    .card-container .card-item:nth-child(3),
+    .card-container .card-item:nth-child(4),
+    .card-container .card-item:nth-child(5),
+    .card-container .card-item:nth-child(6),
+    .card-container .card-item:nth-child(7),
+    .card-container .card-item:nth-child(9) {
+        background-color: #EFEFEF;
+    }
+
+    .card-container .card-item:after {
+        background-color: #6f98a8;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 1rem;
+    }
+
+    .card-container .card-item:nth-child(2):after,
+    .card-container .card-item:nth-child(4):after {
+        background-color: #2B8ead;
+    }
+
+    .card-container .card-item:nth-child(3):after,
+    .card-container .card-item:nth-child(5):after,
+    .card-container .card-item:nth-child(9):after {
+        background-color: #2f454e;
+    }
+
+    .card-container .card-item:nth-child(6):after,
+    .card-container .card-item:nth-child(7):after {
+        background-color: #BFBFBF;
+    }
+}
